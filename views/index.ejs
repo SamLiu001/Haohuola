@@ -1,0 +1,50 @@
+<% include header.html%>
+<div id="main">
+	<div id="content">
+		<div id="siteInfo">本站为您实时同步了什么值得买、我爱白菜网、没得比、超值分享汇、慢慢买、今日聚超值、惠惠购物、留住你、买手党、买个便宜货、牛杂网、发现值得买等十几个折扣网站的优惠信息，<b>让您一站逛遍全网优惠！</b>
+		<span id="iknow">我知道了</span>
+		</div>
+		<div id="info">
+			
+		</div>
+		<% items.forEach(function(item){
+		%>
+		<div class="post">
+			<img class="thum-img" src="<%=item.thumbnail%>" alt="<%=item.article_title%>" />
+
+			<div class="post-content">
+				<div class="post-content-top">
+					<h3 class="post-title">
+						<a  class="title-link item-link" href="../post/<%=item.id%>" target="_blank">
+							<%-item.title%>
+						</a>
+					</h3>
+					<h3 class="post-title price-title">
+					</h3>
+					<p class="p-thum"><a href="../post/<%=item.id%>" target="_blank"><%=item["short_content"]%></a></p>
+				</div>
+				<p class="post-content-bottom">
+					<span>
+						<a class="mall-link from-link"><%=item.time%></a>
+						<a class="mall-link from-link the-from">来自 <%=item.author%></a>
+					</span>
+
+					<a href="<%=item.link%>"rel="nofollow" target="_blank" class="shop-link shop-link-index">直达链接</a>
+					
+					<a class="mall-link malls the-mall" target="_blank"><%=item.mall%></a>
+					
+				</p>
+			</div>
+		</div>
+		<%
+		})%>
+
+		<div style="clear:both;"></div>
+	</div>
+	<div>
+		当前第<%=page%>页
+	</div>
+</div>
+
+</body>
+</html>
