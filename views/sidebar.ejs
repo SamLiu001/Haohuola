@@ -1,0 +1,37 @@
+<div class="hot-item">
+	<div id="hot-tab">
+		7小时热门
+	</div>
+	<li class="hot">
+		<a href="" class="side-link" target="_blank">
+			<img class="hot-image" src="" alt="">
+			<div class="hot-title-out">
+				<div class="hot-item-top">
+				</div>
+				<div class="hot-item-bottom">
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</a>
+	</li>
+</div>
+
+<div class="hot-item today-update">
+	<div id="hot-tab">
+		今日更新（条）
+	</div>
+	<div class="siteList">
+		<% updateItems.forEach(function(item){
+			%>
+			<li>
+				<a>
+					<span class="siteName"><%=item._id%></span>
+					<span class="siteNum"><%=item.num%></span>
+				</a>
+			</li>
+			<%
+		})
+		%>
+	</div>
+</div>
+

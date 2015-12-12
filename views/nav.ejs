@@ -1,0 +1,13 @@
+<div class="nav-left-absolute" id="nav-left">
+<%
+categorys.forEach(function(cate){
+	%>
+	<li class="nav-list">
+		<a href="/<%=(cate.name=='all'?'':cate.name)%>" class="cate-link cate-<%=cate.name%>" id="cate-<%=cate.name%>">
+			<span class="cate-title"><%=cate.value%></span>
+		</a>
+	</li>
+	<%
+})
+%>
+</div>

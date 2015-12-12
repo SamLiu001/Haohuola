@@ -1049,9 +1049,6 @@ img.nj_face_image{
 	display: block;
 	color:#7F8C8D;
 }
-.siteList li a:hover{
-	color:#34495E;
-}
 .siteNum{
 	float:right;
 }
@@ -1076,4 +1073,102 @@ img.nj_face_image{
 }
 .__temp a{
 	color:#3498DB;
+}
+
+#mall{
+	position: relative;
+    padding: 10px;
+    background-color: #fff;
+    width: 700px;
+    height:auto;
+    margin-bottom: 20px;
+    border: solid 1px #F5F5F5;
+    overflow: auto;
+}
+.mallItem{
+	width: 80px;
+    float: left;
+    margin-left: 15px;
+    padding-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    list-style: none;
+}
+.mallItem-link{
+	padding:2px 5px;
+	color:#555;
+	cursor: pointer;
+}
+.mallItem-link:hover{
+	background-color:#ff6766;
+	color:#fff;
+	transition:all ease 0.15s;
+	-webkit-transition:all ease 0.15s;
+	-ms-transition:all ease 0.15s;
+	-moz-transition:all ease 0.15s;
+}
+#category{
+	position: relative;
+    padding: 10px;
+    background-color: #fff;
+    width: 700px;
+    height:auto;
+    margin-bottom: 20px;
+    border: solid 1px #F5F5F5;
+    overflow: auto;
+}
+
+.cateItem{
+	width: 80px;
+    float: left;
+    margin-left: 15px;
+    padding-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    list-style: none;
+}
+.cateItem-link{
+	padding:2px 5px;
+	color:#555;
+	cursor: pointer;
+}
+.cateItem-link:hover{
+	background-color:#ff6766;
+	color:#fff;
+	transition:all ease 0.15s;
+	-webkit-transition:all ease 0.15s;
+	-ms-transition:all ease 0.15s;
+	-moz-transition:all ease 0.15s;
+}
+
+.pages{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.page-span,
+.page{
+	display: inline-block;
+    margin: 0px 5px;
+    min-width: 24px;
+    width: auto;
+    height: 34px;
+    padding: 0px 5px;
+    color: #1ABC9C;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+}
+.page:hover{
+	color: #fdfdfd;
+    background-color: #ff6766;
+}
+.current{
+	color:#fff;
 }

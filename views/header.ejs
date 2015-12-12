@@ -17,8 +17,18 @@
         <![endif]-->
         <title>
 	    </title>
-            <link rel="stylesheet" href="http://7xivyp.com1.z0.glb.clouddn.com/normalize.css">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="http://7xivyp.com1.z0.glb.clouddn.com/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <style>
+        .now-mall{
+            background-color:#ff6766;
+            color:#fff;
+        }
+        .now-cate{
+            background-color:#ff6766;
+            color:#fff;
+        }
+        </style>
         <!--[if lt IE 8]>
         <style>
             html{
@@ -39,12 +49,15 @@
             }
         </style>
         <![endif]-->
+        <script src="/js/jquery.js"></script>
+        <script src="/js/js.cookie.js"></script>
+        <script src="/js/main.js"></script>
     </head>
     <body ontouchstart="">
     <div class="header">
         <div class="header-nav">
             <div class="header-left">
-                <a href="" target="_self">
+                <a href="/" target="_self">
                     <img id="logo" src="http://7xivyp.com1.z0.glb.clouddn.com/img/logo.png" alt="">
                 </a>
             </div>
@@ -52,13 +65,16 @@
             <div id="bookmark"><span id="shoucang">收藏本站</span> <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=43ba89879bd7a843b14631c7119ec9f6a565db09f912fefb42bdcfb8765a3898"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="好货啦用户交流群" title="好货啦用户交流群"></a>
     </div>
                 <div class="nav-menu">
-                    <div>
-                        
-                    </div>
+                <div>
+                    <a class="menu-link menu-link-home" style="" href="/">首页</a>
+                    <a class="menu-link menu-link-cn" style="" href="/cn">国内折扣</a>
+                    <a class="menu-link menu-link-haitao" style="" href="/haitao">海淘精选</a>
+                    <a class="menu-link menu-link-baicai" style="" href="/baicai">白菜价</a>
                 </div>
+            </div>
                 <div id="search-out">
-                    <form action="" method="get" id="search-form">
-                        <input type="text" name="s" class="search" id="search" placeholder="懒得找了？搜一下试试..." value="">
+                    <form action="search/" method="get" id="search-form">
+                        <input type="text" name="word" class="search" id="search" placeholder="懒得找了？搜一下试试..." value="">
                         <input type="submit" value="搜索" class="button" id="searchBu">
                     </form>
                 </div>

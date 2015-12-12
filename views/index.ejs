@@ -1,11 +1,35 @@
-<% include header.html%>
+<% include header.ejs%>
+<style>
+.menu-link-<%=route%>{
+    color:#ff6766;
+}
+</style>
 <div id="main">
+
 	<div id="content">
-		<div id="siteInfo">本站为您实时同步了什么值得买、我爱白菜网、没得比、超值分享汇、慢慢买、今日聚超值、惠惠购物、留住你、买手党、买个便宜货、牛杂网、发现值得买等十几个折扣网站的优惠信息，<b>让您一站逛遍全网优惠！</b>
+		<!-- <div id="siteInfo">本站为您实时同步了什么值得买、我爱白菜网、没得比、超值分享汇、慢慢买、今日聚超值、惠惠购物、留住你、买手党、买个便宜货、牛杂网、发现值得买等十几个折扣网站的优惠信息，<b>让您一站逛遍全网优惠！</b>
 		<span id="iknow">我知道了</span>
-		</div>
-		<div id="info">
-			
+		</div> -->
+		<div style="display:<%=display%>">
+		<ul id="mall">
+		<%
+		mallItems.forEach(function(item){
+			%>
+			<li class="mallItem" data="<%=item.name%>"><a class="mallItem-link mall-<%=item.name%>"><%=item.value%></a></li>
+			<%
+		})
+		%>
+		</ul>
+
+		<ul id="category">
+			<%
+			categorys.forEach(function(item){
+				%>
+				<li class="cateItem" data="<%=item.name%>"><a class="cateItem-link cate-<%=item.name%>"><%=item.value%></a></li>
+				<%
+			})
+			%>
+		</ul>
 		</div>
 		<% items.forEach(function(item){
 		%>
@@ -25,7 +49,7 @@
 				</div>
 				<p class="post-content-bottom">
 					<span>
-						<a class="mall-link from-link"><%=item.time%></a>
+						<a class="mall-link from-link"><%=diffTime(item.time)%></a>
 						<a class="mall-link from-link the-from">来自 <%=item.author%></a>
 					</span>
 
@@ -40,9 +64,34 @@
 		})%>
 
 		<div style="clear:both;"></div>
+		<div class="pages">
+		<% pages.forEach(function(item){
+			if(item.type=='link'){
+				if(item.page==page){
+					%>
+					<span class="page current"><%=item.name%></span>
+					<%
+				}else{
+					if(item.page==1){
+					%>
+					<a class="page" href="/"><%=item.name%></a>
+					<%
+					}else{
+					%>
+					<a class="page" href="/page/<%=item.page%>"><%=item.name%></a>
+					<%
+					}
+				}
+			}else{
+				%>
+				<span class="page-span"><%=item.name%></span>
+				<%
+			}
+		})%>
+		</div>
 	</div>
-	<div>
-		当前第<%=page%>页
+	<div id="sideBar">
+		<% include sidebar.ejs%>
 	</div>
 </div>
 
