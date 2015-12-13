@@ -1,19 +1,19 @@
 {
-  "name": "好货啦",
-  "description": "好货啦-折扣聚合网站",
-  "version": "1.0.0",
-  "author":"Sam Liu",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:SamLiu001/Haohuola.git"
-  },
-  "dependencies": {
-    "express": "^4.13.3",
-    "body-parser":"^1.14.1",
-    "ejs":"^2.3.4",
-    "mongodb":"2.0.48"
-  },
-  "devDependencies":{
-  	
-  }
+    "name": "Haohuola",
+    "description": "好货啦-折扣聚合网站",
+    "version": "1.0.0",
+    "author": "Sam Liu",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:SamLiu001/Haohuola.git"
+    },
+    "dependencies": {
+        "express": "^4.13.3",
+        "body-parser": "^1.14.1",
+        "ejs": "^2.3.4",
+        "mongodb": "2.0.48"
+    },
+    "devDependencies": {
+
+    }
 }
